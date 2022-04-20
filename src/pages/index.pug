@@ -1,17 +1,17 @@
 extends ../pug/layout.pug
 
 block meta
-  title Главная
+  title Новости
   meta(name='description', content='')
 
-//- block append head
-//-   link(rel='stylesheet', href='css/some.css')
-
 block content
-  h1 Заголовок
-
-//- block footer
-//-   p footer
-
-//- block append page-bottom
-//-   script(src='js/some.js')
+  section.news
+    each item in NewsItems
+      article.news-item
+        .news-item__img-wrapper
+          .news-item__img-frame
+            img.news-item__img(src=`img/${item.img}`, alt=`${item.title}`)
+        .news-item__tag= item.tag
+        h2.news-item__title= item.title
+        p.news-item__text= item.text
+        p.news-item__date= item.date

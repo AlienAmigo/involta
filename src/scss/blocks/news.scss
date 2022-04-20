@@ -1,0 +1,8 @@
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  width: $screen-xl;
+  margin: auto;
+  padding: $gap-xl 0 0;
+  border-top: 3px solid #000000;
+}

@@ -1,3 +1,5 @@
+// 1. Colors ===========================================================================================================
+
 $main-color:          #b2544f;
 $warning-color:       #fdc05d;
 
@@ -11,11 +13,18 @@ $text-color:          $gray-medium;
 
 $transparent-color:   rgba(255, 255, 255, 0);
 
-$font-family:         -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+// 2. Typography  ======================================================================================================
+
+$font-family:         NotoSans, Arial, 'Helvetica Neue', sans-serif;
 $font-size:           15px;
 $line-height:         1.46;
+
+// 3. Grid / Screen ====================================================================================================
+
+$gap-xl:              50px;
 
 $screen-xs:           480px;
 $screen-sm:           768px;
 $screen-md:           1024px;
 $screen-lg:           1200px;
+$screen-xl:           1440px;
