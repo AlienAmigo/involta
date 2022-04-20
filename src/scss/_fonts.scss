@@ -1,9 +1,35 @@
-//@font-face {
-//  font-family: Montserrat;
-//  src:
-//    url('') format('woff2'),
-//    url('') format('woff');
-//  font-weight: 300;
-//  font-style: normal;
-//  font-display: block;
-//}
+@font-face {
+  font-family: NotoSans;
+  src:
+    url('../fonts/NotoSans.woff2') format('woff2'),
+    url('../fonts/NotoSans.woff') format('woff'),
+    url('../fonts/NotoSans.ttf') format('ttf'),
+    url('../fonts/NotoSans.eot') format('eot');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Philosopher;
+  src:
+    url('../fonts/philosopher-bold.woff2') format('woff2'),
+    url('../fonts/philosopher-bold.woff') format('woff'),
+    url('../fonts/philosopher-bold.ttf') format('ttf'),
+    url('../fonts/philosopher-bold.eot') format('eot');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: PTSerif;
+  src:
+    url('../fonts/ptserif-bold.woff2') format('woff2'),
+    url('../fonts/ptserif-bold.woff') format('woff'),
+    url('../fonts/ptserif-bold.ttf') format('ttf'),
+    url('../fonts/ptserif-bold.eot') format('eot');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
