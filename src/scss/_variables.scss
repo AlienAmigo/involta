@@ -1,20 +1,21 @@
-$main-color:          #7dcbcf;
+$main-color:          #b2544f;
 $warning-color:       #fdc05d;
 
 $white-color:         #ffffff;
 
-$gray-light:          #f2f2f2;
+$gray-light:          #9e9e9e;
+$gray-medium:         #7b7b7b;
 $gray-dark:           #231f20;
 
-$text-color:          $gray-dark;
+$text-color:          $gray-medium;
 
 $transparent-color:   rgba(255, 255, 255, 0);
 
 $font-family:         -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
-$font-size:           14px;
-$line-height:         1.4;
+$font-size:           15px;
+$line-height:         1.46;
 
 $screen-xs:           480px;
 $screen-sm:           768px;
-$screen-md:           992px;
+$screen-md:           1024px;
 $screen-lg:           1200px;
