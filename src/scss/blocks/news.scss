@@ -6,3 +6,32 @@
   padding: $gap-xl 0 0;
   border-top: 3px solid #000000;
 }
+
+@media screen and (max-width: calc($screen-xl - 1px)) {
+  .news {
+    width: 100%;
+    max-width: 100vw;
+    padding: $gap-xl;
+  }
+}
+
+@media screen and (max-width: calc($screen-lg - 1px)) {
+  .news {
+    width: 100%;
+    padding: $gap-lg;
+  }
+}
+
+@media screen and (max-width: calc($screen-md - 1px)) {
+  .news {
+    width: 100%;
+    padding: $gap-md;
+  }
+}
+
+@media screen and (max-width: calc($screen-sm - 1px)) {
+  .news {
+    width: 100%;
+    padding: $gap-sm;
+  }
+}
