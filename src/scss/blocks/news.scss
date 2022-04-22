@@ -4,7 +4,7 @@
   padding: $gap-sm;
   border-top: 3px solid #000000;
 
-  .news {
+  & .glide {
     margin-top: -$animation-offset;
 
     &__slides {
@@ -30,13 +30,16 @@
       &__slides {
         display: flex;
         flex-flow: row wrap;
-        gap: $gap-md;
         width: 100% !important; /* stylelint-disable-line  declaration-no-important */
         transform: initial !important; /* stylelint-disable-line  declaration-no-important */
       }
 
       &__slide {
         width: calc((100% - (#{$gap-md} * 2)) / 3);
+
+        &:not(:nth-of-type(3n)) {
+          margin-right: $gap-md;
+        }
 
         &:nth-of-type(10),
         &:nth-of-type(11),
@@ -55,17 +58,21 @@
     padding: calc(#{$gap-xl} - #{$animation-offset}) $gap-lg 0;
 
     .glide {
-      &__slides {
-        gap: $gap-lg;
-      }
-
       &__slide {
         width: calc((100% - (#{$gap-lg} * 3)) / 4);
+
+        &:not(:nth-of-type(3n)) {
+          margin-right: 0;
+        }
+
+        &:not(:nth-of-type(4n)) {
+          margin-right: $gap-xl;
+        }
 
         &:nth-of-type(10),
         &:nth-of-type(11),
         &:nth-of-type(12) {
-          display: flex;
+          display: block;
         }
       }
     }
