@@ -1,37 +1,87 @@
 .news {
   display: flex;
-  flex-wrap: wrap;
-  width: $screen-xl;
-  margin: auto;
-  padding: $gap-xl 0 0;
+  width: 100%;
+  padding: $gap-sm;
   border-top: 3px solid #000000;
-}
 
-@media screen and (max-width: calc($screen-xl - 1px)) {
   .news {
-    width: 100%;
-    max-width: 100vw;
-    padding: $gap-xl;
+    margin-top: -$animation-offset;
+
+    &__slides {
+      padding-top: $animation-offset;
+    }
   }
 }
 
-@media screen and (max-width: calc($screen-lg - 1px)) {
+@media screen and (min-width: $screen-sm) {
   .news {
-    width: 100%;
-    padding: $gap-lg;
-  }
-}
-
-@media screen and (max-width: calc($screen-md - 1px)) {
-  .news {
-    width: 100%;
     padding: $gap-md;
   }
 }
 
-@media screen and (max-width: calc($screen-sm - 1px)) {
+@media screen and (min-width: $screen-md) {
+  .news {
+    .glide {
+      &__track {
+        height: max-content;
+        overflow: visible;
+      }
+
+      &__slides {
+        display: flex;
+        flex-flow: row wrap;
+        gap: $gap-md;
+        width: 100% !important; /* stylelint-disable-line  declaration-no-important */
+        transform: initial !important; /* stylelint-disable-line  declaration-no-important */
+      }
+
+      &__slide {
+        width: calc((100% - (#{$gap-md} * 2)) / 3);
+
+        &:nth-of-type(10),
+        &:nth-of-type(11),
+        &:nth-of-type(12) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
   .news {
     width: 100%;
-    padding: $gap-sm;
+    margin: 0 auto;
+    padding: calc(#{$gap-xl} - #{$animation-offset}) $gap-lg 0;
+
+    .glide {
+      &__slides {
+        gap: $gap-lg;
+      }
+
+      &__slide {
+        width: calc((100% - (#{$gap-lg} * 3)) / 4);
+
+        &:nth-of-type(10),
+        &:nth-of-type(11),
+        &:nth-of-type(12) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .news {
+    width: $screen-xl;
+    margin: 0 auto;
+    padding: calc(#{$gap-xl} - #{$animation-offset}) 0 0;
+
+    .glide {
+      &__slide {
+        width: calc((#{$screen-xl} - (#{$gap-xl} * 3)) / 4);
+      }
+    }
   }
 }

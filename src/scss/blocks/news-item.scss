@@ -1,14 +1,9 @@
 .news-item {
   display: flex;
   flex-direction: column;
-  width: calc((#{$screen-xl} - (#{$gap-xl} * 3)) / 4);
-  margin-bottom: 50px;
+  margin-bottom: $gap-xl;
   cursor: pointer;
   transition: transform 0.15s ease-in;
-
-  &:not(:nth-of-type(4n)) {
-    margin-right: $gap-xl;
-  }
 
   &__img-wrapper {
     position: relative;
@@ -31,9 +26,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition:
-      transform 0.45s ease-in,
-      opacity 0.35s ease-in;
+    transition: transform 0.45s ease-in, opacity 0.35s ease-in;
   }
 
   &__tag {
@@ -94,44 +87,27 @@
   }
 }
 
-@media screen and  (max-width: calc($screen-xl - 1px)) {
+@media screen and (max-width: calc($screen-xl - 1px)) {
   .news-item {
-    width: calc((100% - (#{$gap-xl} * 3)) / 4);
     margin-right: 0;
   }
 }
 
-@media screen and  (max-width: calc($screen-lg - 1px)) {
+@media screen and (max-width: calc($screen-lg - 1px)) {
   .news-item {
-    width: calc((100% - (#{$gap-lg} * 2)) / 3);
+    width: 100%;
     margin-right: 0;
-
-    &:not(:nth-of-type(4n)) {
-      margin-right: 0;
-    }
-
-    &:not(:nth-of-type(3n)) {
-      margin-right: $gap-lg;
-    }
   }
 }
 
-@media screen and  (max-width: calc($screen-md - 1px)) {
+@media screen and (max-width: calc($screen-md - 1px)) {
   .news-item {
-    width: calc((100% - #{$gap-md}) / 2);
+    width: 100%;
     margin-right: 0;
-
-    &:not(:nth-of-type(3n)) {
-      margin-right: 0;
-    }
-
-    &:not(:nth-of-type(2n)) {
-      margin-right: $gap-md;
-    }
   }
 }
 
-@media screen and  (max-width: calc($screen-sm - 1px)) {
+@media screen and (max-width: calc($screen-sm - 1px)) {
   .news-item {
     width: 100%;
     margin-right: 0;

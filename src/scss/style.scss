@@ -1,3 +1,6 @@
+@import 'node_modules/normalize.css/normalize';
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core.scss'; /* stylelint-disable-line scss/at-import-partial-extension */
+
 @import 'fonts';
 @import 'variables';
 @import 'mixins';

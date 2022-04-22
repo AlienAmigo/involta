@@ -6,12 +6,18 @@ block meta
 
 block content
   section.news
-    each item in NewsItems
-      article.news-item
-        .news-item__img-wrapper
-          .news-item__img-frame
-            img.news-item__img(src=`img/${item.img}`, alt=`${item.title}`)
-        .news-item__tag= item.tag
-        h2.news-item__title= item.title
-        p.news-item__text= item.text
-        p.news-item__date= item.date
+    #glide.glide
+      .glide__track(data-glide-el='track')
+        ul.glide__slides
+          each item in NewsItems
+            li.glide__slide
+              article.news-item
+                .news-item__img-wrapper
+                  .news-item__img-frame
+                    img.news-item__img(
+                      src=`img/${item.img}`,
+                      alt=`${item.title}`)
+                .news-item__tag= item.tag
+                h2.news-item__title= item.title
+                p.news-item__text= item.text
+                p.news-item__date= item.date
