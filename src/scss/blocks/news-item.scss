@@ -1,7 +1,7 @@
 .news-item {
   display: flex;
   flex-direction: column;
-  margin-bottom: $gap-sm;
+  margin-bottom: $gap-xl;
   cursor: pointer;
   transition: transform 0.15s ease-in;
 
@@ -104,6 +104,7 @@
   .news-item {
     width: 100%;
     margin-right: 0;
+    margin-bottom: $gap-md;
   }
 }
 
@@ -111,6 +112,7 @@
   .news-item {
     width: 100%;
     margin-right: 0;
+    margin-bottom: $gap-sm;
 
     &:not(:nth-of-type(2n)) {
       margin-right: 0;
