@@ -1,7 +1,8 @@
 .news {
   display: flex;
   width: 100%;
-  padding: $gap-sm;
+  margin-top: $gap-sm;
+  padding: calc(#{$gap-sm} + 3px);
   border-top: 3px solid #000000;
 
   & .glide {
@@ -39,12 +40,15 @@
 
 @media screen and (min-width: $screen-sm) {
   .news {
-    padding: $gap-md;
+    margin-top: $gap-md;
+    padding: calc(#{$gap-md} + 3px);
   }
 }
 
 @media screen and (min-width: $screen-md) {
   .news {
+    margin-top: $gap-lg;
+
     .glide {
       &__track {
         height: max-content;
@@ -82,8 +86,8 @@
 @media screen and (min-width: $screen-lg) {
   .news {
     width: 100%;
-    margin: 0 auto;
-    padding: calc(#{$gap-xl} - #{$animation-offset}) $gap-lg 0;
+    margin: $gap-lg auto 0;
+    padding: calc(#{$gap-xl} - 3px) $gap-lg 0;
 
     .glide {
       &__slide {
@@ -110,8 +114,7 @@
 @media screen and (min-width: $screen-xl) {
   .news {
     width: $screen-xl;
-    margin: 0 auto;
-    padding: calc(#{$gap-xl} - #{$animation-offset}) 0 0;
+    padding: calc(#{$gap-xl} - 3px) 0 0;
 
     .glide {
       &__slide {
