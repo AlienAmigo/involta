@@ -15,9 +15,13 @@ block content
                 .news-item__img-wrapper
                   .news-item__img-frame
                     img.news-item__img(
+                      loading='lazy',
                       src=`img/${item.img}`,
                       alt=`${item.title}`)
                 .news-item__tag= item.tag
                 h2.news-item__title= item.title
                 p.news-item__text= item.text
                 p.news-item__date= item.date
+      .glide__bullets(data-glide-el='controls[nav]')
+        - for(let i=0; i<NewsItems.length; i++)
+          button.glide__bullet(data-glide-dir=`=${i}`)
